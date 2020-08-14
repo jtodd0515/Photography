@@ -2,7 +2,9 @@
   text-align: center;
 }
 h1 {
-  font-family: url('https://fonts.googleapis.com/css?family=Pinyon+Script&display=swap');
+    font-family: 'Pinyon Script';
+    font-size: 5em;
+    text-align: center;
 }
 h2 {
   margin-left: 5em;

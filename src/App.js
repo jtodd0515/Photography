@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
 import Bio from './Components/Bio';
 import Gallerycard from './Components/Gallerycard';
 import galleryData from './galleryData';
 import Lightbox from './Components/Lightbox/Lightbox';
 import lightboximages from './data/imageData';
+import { BrowserRouter as Router, Route } from "react-router-dom"
 function App() {
   return (
+    <Router>
     <div className="App">
       <div className="body">
         {/* <Gallery /> */}
@@ -27,21 +29,23 @@ function App() {
               <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
             </li>
             <li className="nav-item active">
-              <a className="nav-link" href="#gallery">Gallery</a>
+              <a className="nav-link" href="/gallery">Gallery</a>
             </li>
             <li className="nav-item active">
-              <a className="nav-link" href="#pricing">Pricing</a>
+              <a className="nav-link" href="/pricing">Pricing</a>
             </li>
             <li className="nav-item active">
-              <a className="nav-link" href="#contact">Contact</a>
+              <a className="nav-link" href="/contact">Contact</a>
             </li>
           </ul>
         </div>
       </nav>
       <div>
-        <h1>Jodi Lynn Photography</h1>
+      <Route path='/' exact component={Home}  />
+      <Route path='/gallery' component={Gallerycard}  />
+      
       </div>
-      <Bio />
+      
       <div className='card-container'>
         {
           galleryData.map((item, i) => {
@@ -55,8 +59,13 @@ function App() {
 
       </div>
       </div>
-      
+      </Router>
   );
 }
-
+const Home = () => (
+  <Fragment>
+    <h1>Jodi Lynn Photography</h1>
+    <Bio />
+  </Fragment>
+);
 export default App;

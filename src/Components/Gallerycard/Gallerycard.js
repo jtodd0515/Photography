@@ -14,11 +14,13 @@ export default function Gallerycard(props) {
 
             </Card>
             <Card className="p-3">
-                <Card.Img variant="top" src={imageUrl} />
+                <Card.Img variant="top" src='/images/fountain.jpg' />
             </Card>
             <Card className="p-2">
-                <Card.Img variant="top" src={imageUrl} />
-
+                <Card.Img variant="top" src='/images/DSC_0377.jpg' />
+            </Card>
+            <Card className="text-center">
+                <Card.Img variant="top" src='/images/purplepansyduke.jpg' />
             </Card>
             <Card bg="primary" text="white" className="text-center p-3">
                 <blockquote className="blockquote mb-0 card-body">
@@ -30,17 +32,15 @@ export default function Gallerycard(props) {
                     </footer>
                 </blockquote>
             </Card>
-            <Card className="text-center">
-                <Card.Img variant="top" src={imageUrl} />
-            </Card>
             <Card>
-                <Card.Img variant="top" src={imageUrl} />
+                <Card.Img variant="top" src='/images/PSX_2003.jpg' />
             </Card>
+        
             <Card className="text-right">
-                <Card.Img variant="top" src={imageUrl} />
+                <Card.Img variant="top" src='/images//rosegarden.jpg' />
             </Card>
             <Card>
-                <Card.Img variant="top" src={imageUrl} />
+                <Card.Img variant="top" src='/images/fish.jpg' />
             </Card>
         </CardColumns>
     );
